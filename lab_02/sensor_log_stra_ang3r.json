@@ -1,0 +1,34 @@
+[
+  {
+    "timestamp": "2026-02-12T09:51:38.727537",
+    "location": "Zone_D",
+    "event_type": "Fire",
+    "damage_level": "High",
+    "casualties": 44,
+    "urgency": "Immediate"
+  },
+  {
+    "timestamp": "2026-02-12T09:51:41.729976",
+    "location": "Zone_A",
+    "event_type": "Structural_Collapse",
+    "damage_level": "Low",
+    "casualties": 9,
+    "urgency": "Immediate"
+  },
+  {
+    "timestamp": "2026-02-12T09:51:44.730675",
+    "location": "Zone_C",
+    "event_type": "Structural_Collapse",
+    "damage_level": "Low",
+    "casualties": 26,
+    "urgency": "Immediate"
+  },
+  {
+    "timestamp": "2026-02-12T09:51:47.731414",
+    "location": "Zone_C",
+    "event_type": "Structural_Collapse",
+    "damage_level": "Low",
+    "casualties": 31,
+    "urgency": "Medium"
+  }
+]

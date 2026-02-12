@@ -1,0 +1,74 @@
+[
+  {
+    "timestamp": "2026-02-12T10:16:39.718827",
+    "location": "Zone_B",
+    "event_type": "Flood",
+    "damage_level": "Low",
+    "casualties": 31,
+    "urgency": "High"
+  },
+  {
+    "timestamp": "2026-02-12T10:16:44.656754",
+    "location": "Zone_B",
+    "event_type": "Earthquake",
+    "damage_level": "Medium",
+    "casualties": 41,
+    "urgency": "Low"
+  },
+  {
+    "timestamp": "2026-02-12T10:16:49.657087",
+    "location": "Zone_C",
+    "event_type": "Earthquake",
+    "damage_level": "Medium",
+    "casualties": 50,
+    "urgency": "Low"
+  },
+  {
+    "timestamp": "2026-02-12T10:16:54.661886",
+    "location": "Zone_A",
+    "event_type": "Earthquake",
+    "damage_level": "Low",
+    "casualties": 11,
+    "urgency": "Medium"
+  },
+  {
+    "timestamp": "2026-02-12T10:16:59.658018",
+    "location": "Zone_B",
+    "event_type": "Flood",
+    "damage_level": "Critical",
+    "casualties": 4,
+    "urgency": "High"
+  },
+  {
+    "timestamp": "2026-02-12T10:17:04.661397",
+    "location": "Zone_C",
+    "event_type": "Earthquake",
+    "damage_level": "Critical",
+    "casualties": 5,
+    "urgency": "Immediate"
+  },
+  {
+    "timestamp": "2026-02-12T10:17:09.658019",
+    "location": "Zone_A",
+    "event_type": "Flood",
+    "damage_level": "Medium",
+    "casualties": 39,
+    "urgency": "Low"
+  },
+  {
+    "timestamp": "2026-02-12T10:17:14.661395",
+    "location": "Zone_D",
+    "event_type": "Fire",
+    "damage_level": "Critical",
+    "casualties": 40,
+    "urgency": "Low"
+  },
+  {
+    "timestamp": "2026-02-12T10:17:19.658011",
+    "location": "Zone_D",
+    "event_type": "Flood",
+    "damage_level": "Low",
+    "casualties": 36,
+    "urgency": "Low"
+  }
+]
