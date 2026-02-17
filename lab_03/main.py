@@ -1,37 +1,43 @@
 import asyncio
 
-from agents.coordinator_agent import CoordinatorAgent
-from agents.logistics_agent import LogisticsAgent
-from agents.rescue_agent import RescueAgent
-from agents.sensor_agent import SensorAgent
+from agents.lab03_agents import CoordinatorAgent, RescueAgent, SensorAgent
 from environment.disaster_environment import DisasterEnvironment
 
 
-async def main():
-    # Create the DisasterEnvironment instance
-    environment = DisasterEnvironment()
+async def run_lab_03():
+    env = DisasterEnvironment()
 
-    # Create all agents
-    sensor = SensorAgent("s_agentx@xmpp.jp", "pass123", environment)
-    rescue = RescueAgent("r_agentx@xmpp.jp", "pass123")
-    logistics = LogisticsAgent("l_agentx@xmpp.jp", "pass123")
-    coordinator = CoordinatorAgent("c_agentx@xmpp.jp", "pass123")
+    # Credentials as requested
+    s_agent = SensorAgent("s_agentx@xmpp.jp", "pass123")
+    c_agent = CoordinatorAgent("c_agentx@xmpp.jp", "pass123")
+    r_agent = RescueAgent("r_agentx@xmpp.jp", "pass123")
 
-    # Start the agents
-    await sensor.start()
-    await rescue.start(sensor)
-    await logistics.start(rescue)
-    await coordinator.start(rescue, logistics)
+    print("\n" + "=" * 50)
+    print("      LAB 03: DISASTER RESPONSE SIMULATION")
+    print("=" * 50)
 
-    # Run the system for a while (e.g., 30 seconds)
-    await asyncio.sleep(30)
+    # 1. SENSOR Sensing
+    report = await s_agent.sense_and_report(env, c_agent.jid)
+    await asyncio.sleep(1)
 
-    # Stop the agents
-    await sensor.stop()
-    await rescue.stop()
-    await logistics.stop()
-    await coordinator.stop()
+    # 2. COORDINATOR Deliberating
+    task = await c_agent.receive_report(report, s_agent.jid)
+    await asyncio.sleep(1)
+
+    # 3. RESCUE Acting
+    if task:
+        await r_agent.react_to_disaster(task)
+    else:
+        print("\n[SYSTEM] Simulation ended: No intervention required.")
+
+    print("=" * 50)
+    print("--- EXECUTION TRACE COMPLETE ---")
+    print(f"Logs saved to: log_s_agentx.txt, log_c_agentx.txt, log_r_agentx.txt")
+    print("=" * 50 + "\n")
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    try:
+        asyncio.run(run_lab_03())
+    except KeyboardInterrupt:
+        print("\nSimulation aborted by user.")

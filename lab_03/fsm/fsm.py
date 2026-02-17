@@ -1,18 +1,15 @@
-class FSM:
+class RescueFSM:
     def __init__(self):
-        self.state = "Idle"
+        self.state = "IDLE"
 
     def transition(self, event):
-        if self.state == "Idle" and event == "start_task":
-            self.state = "Active"
-        elif self.state == "Active" and event == "waiting_for_resources":
-            self.state = "Waiting"
-        elif self.state == "Active" and event == "task_complete":
-            self.state = "Completed"
-        elif self.state == "Waiting" and event == "resources_received":
-            self.state = "Active"
-        elif self.state == "Completed" and event == "reset":
-            self.state = "Idle"
-
-    def get_state(self):
+        transitions = {
+            ("IDLE", "DISASTER_REPORTED"): "RESCUE_IN_PROGRESS",
+            ("RESCUE_IN_PROGRESS", "RESOURCES_NEEDED"): "WAITING_LOGISTICS",
+            ("WAITING_LOGISTICS", "RESOURCES_RECEIVED"): "RESCUE_IN_PROGRESS",
+            ("RESCUE_IN_PROGRESS", "TASK_COMPLETE"): "IDLE",
+        }
+        new_state = transitions.get((self.state, event))
+        if new_state:
+            self.state = new_state
         return self.state

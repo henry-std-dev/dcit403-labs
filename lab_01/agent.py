@@ -1,45 +1,51 @@
 import asyncio
+import datetime
 
 from spade.agent import Agent
 from spade.behaviour import CyclicBehaviour
-from spade.message import Message
-from spade.template import Template
 
 
 class EchoAgent(Agent):
     class ReceiveBehaviour(CyclicBehaviour):
         async def run(self):
+            # Wait for a message with a timeout to keep the loop responsive
             msg = await self.receive(timeout=10)
             if msg:
-                print(f"Agent received: {msg.body}")
+                timestamp = datetime.datetime.now().strftime("%H:%M:%S")
+                print(f"[{timestamp}] Received from {msg.sender}: {msg.body}")
+
+                # Create and send the reply
                 reply = msg.make_reply()
                 reply.body = f"Echo: {msg.body}"
                 await self.send(reply)
+                print(f"[{timestamp}] Sent echo reply to {msg.sender}")
 
     async def setup(self):
-        print(f"EchoAgent starting at {self.jid}")
-        print("Welcome to the Echo Agent! Waiting for messages...")
-
-        await asyncio.sleep(5)
-
-        print("Closing EchoAgent...")
-        await self.stop()
+        print(f"EchoAgent initializing at {self.jid}")
+        self.add_behaviour(self.ReceiveBehaviour())
+        print("Welcome to the Echo Agent! Status: Listening for messages...")
 
 
 async def main():
-    # XMPP server for testing
     agent_jid = "stra_ang3r@xmpp.jp"
     agent_password = "y12$d34*!#"
 
     agent = EchoAgent(agent_jid, agent_password)
 
+    # Start the agent and register it on the server
     await agent.start(auto_register=True)
-    print("Agent started. The agent will stop after 5 seconds.")
-    await asyncio.sleep(5)
+    print("--- System Online ---")
+
+    active_time = 15
+    print(f"Agent will remain active for {active_time} seconds...")
+    await asyncio.sleep(active_time)
 
     await agent.stop()
-    print("Agent stopped.")
+    print("--- System Offline: Agent stopped ---")
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    try:
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        print("Manual exit triggered by user.")
