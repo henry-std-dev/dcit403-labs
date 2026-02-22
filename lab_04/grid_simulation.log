@@ -1,0 +1,128 @@
+2026-02-22 10:23:48,071 | INFO | slixmpp.features.feature_mechanisms.mechanisms | Authentication failed: not-authorized
+2026-02-22 10:23:49,071 | INFO | slixmpp.features.feature_bind.bind | JID set to: gridcoordinator@xmpp.jp/58611084454333211443092280354
+2026-02-22 10:23:49,072 | INFO | spade.Agent | Agent gridcoordinator@xmpp.jp connected and authenticated.
+2026-02-22 10:23:49,072 | INFO | GridCoordinator | GridCoordinatorAgent starting...
+2026-02-22 10:23:49,139 | INFO | spade.behaviour | FSM running state MONITORING
+2026-02-22 10:23:49,139 | INFO | GridCoordinator | State: MONITORING - waiting for event
+2026-02-22 10:23:51,622 | INFO | slixmpp.features.feature_mechanisms.mechanisms | Authentication failed: not-authorized
+2026-02-22 10:23:52,624 | INFO | slixmpp.features.feature_bind.bind | JID set to: powerplant@xmpp.jp/69761011673425838451617860707
+2026-02-22 10:23:52,624 | INFO | spade.Agent | Agent powerplant@xmpp.jp connected and authenticated.
+2026-02-22 10:23:55,139 | INFO | slixmpp.features.feature_mechanisms.mechanisms | Authentication failed: not-authorized
+2026-02-22 10:23:56,142 | INFO | slixmpp.features.feature_bind.bind | JID set to: storageagent@xmpp.jp/154289415239202792413092287458
+2026-02-22 10:23:56,143 | INFO | spade.Agent | Agent storageagent@xmpp.jp connected and authenticated.
+2026-02-22 10:23:58,651 | INFO | slixmpp.features.feature_mechanisms.mechanisms | Authentication failed: not-authorized
+2026-02-22 10:23:59,140 | INFO | GridCoordinator | No event received.
+2026-02-22 10:23:59,140 | INFO | spade.behaviour | FSM transiting from MONITORING to MONITORING.
+2026-02-22 10:23:59,140 | INFO | spade.behaviour | FSM running state MONITORING
+2026-02-22 10:23:59,141 | INFO | GridCoordinator | State: MONITORING - waiting for event
+2026-02-22 10:23:59,657 | INFO | slixmpp.features.feature_bind.bind | JID set to: consumeragent@xmpp.jp/154627180835414737983092291842
+2026-02-22 10:23:59,658 | INFO | spade.Agent | Agent consumeragent@xmpp.jp connected and authenticated.
+2026-02-22 10:24:02,164 | INFO | slixmpp.features.feature_mechanisms.mechanisms | Authentication failed: not-authorized
+2026-02-22 10:24:03,178 | INFO | slixmpp.features.feature_bind.bind | JID set to: demandagent@xmpp.jp/32016527291134966071617864803
+2026-02-22 10:24:03,179 | INFO | spade.Agent | Agent demandagent@xmpp.jp connected and authenticated.
+2026-02-22 10:24:03,179 | INFO | DemandAgent | DemandAgent starting...
+2026-02-22 10:24:03,179 | INFO | root | All agents started.
+2026-02-22 10:24:08,181 | INFO | DemandAgent | INFORM demand=5
+2026-02-22 10:24:08,181 | INFO | GridCoordinator | Demand received: 5
+2026-02-22 10:24:08,181 | INFO | spade.behaviour | FSM transiting from MONITORING to EVALUATING.
+2026-02-22 10:24:08,181 | INFO | spade.behaviour | FSM running state EVALUATING
+2026-02-22 10:24:08,181 | INFO | GridCoordinator | State: EVALUATING
+2026-02-22 10:24:08,181 | INFO | spade.behaviour | FSM transiting from EVALUATING to MINOR_BALANCING.
+2026-02-22 10:24:08,182 | INFO | spade.behaviour | FSM running state MINOR_BALANCING
+2026-02-22 10:24:08,182 | INFO | GridCoordinator | State: MINOR_BALANCING
+2026-02-22 10:24:08,182 | INFO | spade.behaviour | FSM transiting from MINOR_BALANCING to MONITORING.
+2026-02-22 10:24:08,182 | INFO | spade.behaviour | FSM running state MONITORING
+2026-02-22 10:24:08,182 | INFO | GridCoordinator | State: MONITORING - waiting for event
+2026-02-22 10:24:08,182 | INFO | GridCoordinator | ACK received from powerplant@xmpp.jp: increase_generation_minor_executed
+2026-02-22 10:24:08,182 | INFO | spade.behaviour | FSM transiting from MONITORING to MONITORING.
+2026-02-22 10:24:08,182 | INFO | spade.behaviour | FSM running state MONITORING
+2026-02-22 10:24:08,183 | INFO | GridCoordinator | State: MONITORING - waiting for event
+2026-02-22 10:24:16,187 | INFO | DemandAgent | INFORM demand=15
+2026-02-22 10:24:16,188 | INFO | GridCoordinator | Demand received: 15
+2026-02-22 10:24:16,188 | INFO | spade.behaviour | FSM transiting from MONITORING to EVALUATING.
+2026-02-22 10:24:16,188 | INFO | spade.behaviour | FSM running state EVALUATING
+2026-02-22 10:24:16,188 | INFO | GridCoordinator | State: EVALUATING
+2026-02-22 10:24:16,188 | INFO | spade.behaviour | FSM transiting from EVALUATING to MODERATE_BALANCING.
+2026-02-22 10:24:16,188 | INFO | spade.behaviour | FSM running state MODERATE_BALANCING
+2026-02-22 10:24:16,188 | INFO | GridCoordinator | State: MODERATE_BALANCING
+2026-02-22 10:24:16,189 | INFO | spade.behaviour | FSM transiting from MODERATE_BALANCING to MONITORING.
+2026-02-22 10:24:16,189 | INFO | spade.behaviour | FSM running state MONITORING
+2026-02-22 10:24:16,189 | INFO | GridCoordinator | State: MONITORING - waiting for event
+2026-02-22 10:24:16,189 | INFO | GridCoordinator | ACK received from powerplant@xmpp.jp: increase_generation_moderate_executed
+2026-02-22 10:24:16,189 | INFO | spade.behaviour | FSM transiting from MONITORING to MONITORING.
+2026-02-22 10:24:16,189 | INFO | spade.behaviour | FSM running state MONITORING
+2026-02-22 10:24:16,189 | INFO | GridCoordinator | State: MONITORING - waiting for event
+2026-02-22 10:24:16,189 | INFO | GridCoordinator | ACK received from storageagent@xmpp.jp: discharge_moderate_executed
+2026-02-22 10:24:16,189 | INFO | spade.behaviour | FSM transiting from MONITORING to MONITORING.
+2026-02-22 10:24:16,190 | INFO | spade.behaviour | FSM running state MONITORING
+2026-02-22 10:24:16,190 | INFO | GridCoordinator | State: MONITORING - waiting for event
+2026-02-22 10:24:24,190 | INFO | DemandAgent | INFORM demand=30
+2026-02-22 10:24:24,190 | INFO | GridCoordinator | Demand received: 30
+2026-02-22 10:24:24,190 | INFO | spade.behaviour | FSM transiting from MONITORING to EVALUATING.
+2026-02-22 10:24:24,190 | INFO | spade.behaviour | FSM running state EVALUATING
+2026-02-22 10:24:24,190 | INFO | GridCoordinator | State: EVALUATING
+2026-02-22 10:24:24,191 | INFO | spade.behaviour | FSM transiting from EVALUATING to SEVERE_BALANCING.
+2026-02-22 10:24:24,191 | INFO | spade.behaviour | FSM running state SEVERE_BALANCING
+2026-02-22 10:24:24,191 | INFO | GridCoordinator | State: SEVERE_BALANCING
+2026-02-22 10:24:24,191 | INFO | spade.behaviour | FSM transiting from SEVERE_BALANCING to MONITORING.
+2026-02-22 10:24:24,191 | INFO | spade.behaviour | FSM running state MONITORING
+2026-02-22 10:24:24,191 | INFO | GridCoordinator | State: MONITORING - waiting for event
+2026-02-22 10:24:24,194 | INFO | GridCoordinator | ACK received from powerplant@xmpp.jp: activate_backup_executed
+2026-02-22 10:24:24,194 | INFO | spade.behaviour | FSM transiting from MONITORING to MONITORING.
+2026-02-22 10:24:24,195 | INFO | spade.behaviour | FSM running state MONITORING
+2026-02-22 10:24:24,195 | INFO | GridCoordinator | State: MONITORING - waiting for event
+2026-02-22 10:24:24,196 | INFO | GridCoordinator | ACK received from storageagent@xmpp.jp: discharge_severe_executed
+2026-02-22 10:24:24,197 | INFO | spade.behaviour | FSM transiting from MONITORING to MONITORING.
+2026-02-22 10:24:24,198 | INFO | spade.behaviour | FSM running state MONITORING
+2026-02-22 10:24:24,198 | INFO | GridCoordinator | State: MONITORING - waiting for event
+2026-02-22 10:24:24,198 | INFO | GridCoordinator | ACK received from consumeragent@xmpp.jp: load_shed_executed
+2026-02-22 10:24:24,199 | INFO | spade.behaviour | FSM transiting from MONITORING to MONITORING.
+2026-02-22 10:24:24,199 | INFO | spade.behaviour | FSM running state MONITORING
+2026-02-22 10:24:24,200 | INFO | GridCoordinator | State: MONITORING - waiting for event
+2026-02-22 10:24:32,200 | WARNING | DemandAgent | INFORM failure=powerplant
+2026-02-22 10:24:32,200 | INFO | spade.behaviour | Killing behavior OneShotBehaviour/SendDemandBehaviour with exit code: None
+2026-02-22 10:24:32,200 | WARNING | GridCoordinator | Failure detected! Activating EMERGENCY.
+2026-02-22 10:24:32,201 | INFO | spade.behaviour | FSM transiting from MONITORING to EMERGENCY.
+2026-02-22 10:24:32,201 | INFO | spade.behaviour | FSM running state EMERGENCY
+2026-02-22 10:24:32,201 | WARNING | GridCoordinator | State: EMERGENCY
+2026-02-22 10:24:32,201 | INFO | spade.behaviour | FSM transiting from EMERGENCY to RECOVERY.
+2026-02-22 10:24:32,201 | INFO | spade.behaviour | FSM running state RECOVERY
+2026-02-22 10:24:32,201 | INFO | GridCoordinator | State: RECOVERY
+2026-02-22 10:24:32,201 | INFO | GridCoordinator | System stabilized.
+2026-02-22 10:24:32,201 | INFO | spade.behaviour | FSM transiting from RECOVERY to MONITORING.
+2026-02-22 10:24:32,201 | INFO | spade.behaviour | FSM running state MONITORING
+2026-02-22 10:24:32,202 | INFO | GridCoordinator | State: MONITORING - waiting for event
+2026-02-22 10:24:32,202 | INFO | GridCoordinator | ACK received from powerplant@xmpp.jp: emergency_shutdown_executed
+2026-02-22 10:24:32,202 | INFO | spade.behaviour | FSM transiting from MONITORING to MONITORING.
+2026-02-22 10:24:32,202 | INFO | spade.behaviour | FSM running state MONITORING
+2026-02-22 10:24:32,202 | INFO | GridCoordinator | State: MONITORING - waiting for event
+2026-02-22 10:24:32,202 | INFO | GridCoordinator | ACK received from storageagent@xmpp.jp: emergency_mode_executed
+2026-02-22 10:24:32,202 | INFO | spade.behaviour | FSM transiting from MONITORING to MONITORING.
+2026-02-22 10:24:32,202 | INFO | spade.behaviour | FSM running state MONITORING
+2026-02-22 10:24:32,202 | INFO | GridCoordinator | State: MONITORING - waiting for event
+2026-02-22 10:24:32,202 | INFO | GridCoordinator | ACK received from consumeragent@xmpp.jp: critical_load_reduction_executed
+2026-02-22 10:24:32,202 | INFO | spade.behaviour | FSM transiting from MONITORING to MONITORING.
+2026-02-22 10:24:32,203 | INFO | spade.behaviour | FSM running state MONITORING
+2026-02-22 10:24:32,203 | INFO | GridCoordinator | State: MONITORING - waiting for event
+2026-02-22 10:24:42,204 | INFO | GridCoordinator | No event received.
+2026-02-22 10:24:42,204 | INFO | spade.behaviour | FSM transiting from MONITORING to MONITORING.
+2026-02-22 10:24:42,204 | INFO | spade.behaviour | FSM running state MONITORING
+2026-02-22 10:24:42,204 | INFO | GridCoordinator | State: MONITORING - waiting for event
+2026-02-22 10:24:52,205 | INFO | GridCoordinator | No event received.
+2026-02-22 10:24:52,205 | INFO | spade.behaviour | FSM transiting from MONITORING to MONITORING.
+2026-02-22 10:24:52,205 | INFO | spade.behaviour | FSM running state MONITORING
+2026-02-22 10:24:52,205 | INFO | GridCoordinator | State: MONITORING - waiting for event
+2026-02-22 10:25:02,213 | INFO | GridCoordinator | No event received.
+2026-02-22 10:25:02,213 | INFO | spade.behaviour | FSM transiting from MONITORING to MONITORING.
+2026-02-22 10:25:02,214 | INFO | spade.behaviour | FSM running state MONITORING
+2026-02-22 10:25:02,214 | INFO | GridCoordinator | State: MONITORING - waiting for event
+2026-02-22 10:25:12,221 | INFO | GridCoordinator | No event received.
+2026-02-22 10:25:12,221 | INFO | spade.behaviour | FSM transiting from MONITORING to MONITORING.
+2026-02-22 10:25:12,222 | INFO | spade.behaviour | FSM running state MONITORING
+2026-02-22 10:25:12,222 | INFO | GridCoordinator | State: MONITORING - waiting for event
+2026-02-22 10:25:22,229 | INFO | GridCoordinator | No event received.
+2026-02-22 10:25:22,229 | INFO | spade.behaviour | FSM transiting from MONITORING to MONITORING.
+2026-02-22 10:25:22,229 | INFO | spade.behaviour | FSM running state MONITORING
+2026-02-22 10:25:22,230 | INFO | GridCoordinator | State: MONITORING - waiting for event
+2026-02-22 10:25:26,678 | INFO | spade.behaviour | FSM running state MONITORING
+2026-02-22 10:25:26,678 | INFO | GridCoordinator | State: MONITORING - waiting for event
